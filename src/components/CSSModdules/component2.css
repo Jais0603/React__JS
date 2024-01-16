@@ -1,0 +1,14 @@
+.heading {
+    background-color: pink;
+    color: blanchedalmond;
+    padding: 20px;
+    border: 2px solid yellow;
+}
+
+.para{
+    background-color: blueviolet;
+    color: azure;
+    padding: 20px;
+    border: 2px solid rosybrown;
+    
+}

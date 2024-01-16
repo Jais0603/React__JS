@@ -1,14 +1,39 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
+import React, { useState } from 'react';
 
-const MyNavbar = () => {
+const LoginForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [submittedData, setSubmittedData] = useState(null);
+
+  const handleSubmit = () => {
+    setSubmittedData({ email, password });
+  };
+
   return (
-    <>
-    
-    <Navbar/>
-    </>
+    <div>
+      <form>
+        <label>Email Id</label>
+        <input type="email"value={email} onChange={(e) => setEmail(e.target.value)}/>
+
+        <br />
+        <label>Password</label>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+
+        <br />
+
+        <button type="button" onClick={handleSubmit}>Submit</button>
+      </form>
+
+      {submittedData && (
+        <div>
+          <h3> The submitted data is: </h3>
+          
+          <p>Your Email is: {submittedData.email}</p>
+          <p>your Password is: {submittedData.password}</p>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default MyNavbar;
+export default LoginForm;
