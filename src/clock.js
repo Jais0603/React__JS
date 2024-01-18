@@ -1,27 +1,3 @@
-
-// import React, { useEffect, useState } from 'react'
-// import { useAccordionButton } from 'react-bootstrap';
-
-// function App(){
-//   const [ timer, setTimer] = useState(0);
-//   useEffect(()=> {
-//     setTimeout(()=>{
-//       setTimer(timer+1)
-//     }, 1000)
-//   })
-//   return(
-//     <>
-
-//     <div>
-//       {timer}
-//     </div>
-//     </>
-//   )
-//   ;
-// }
-
-// export default App
-
 import React, { useState, useEffect } from 'react';
 
 const Clock = () => {
